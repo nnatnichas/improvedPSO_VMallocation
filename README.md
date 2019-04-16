@@ -6,9 +6,9 @@ There are consisted of 2 folders inside:
 
 1. cloudsim-plus-master: Java simulation framework for various kinds of cloud services from infrastructure level (IaaS) to software level (SaaS)
 
-2. VmAllocationPSOResearch: (Modified) simulation implementation part
-<br />It is consists of 7 main classes:
-  (1) Particle: the smallest unit in PSO. It consists of identification number (id), the best position, the best position fitness, and lists of VMs, hosts, velocity, and position. The main functions in Particle are calculating fitness and managing best position of a particle. 
+2. VmAllocationPSOResearch: (Modified) simulation implementation part<br />
+It is consists of 7 main classes:<br />
+(1) Particle: the smallest unit in PSO. It consists of identification number (id), the best position, the best position fitness, and lists of VMs, hosts, velocity, and position. The main functions in Particle are calculating fitness and managing best position of a particle. <br />
 When particle is constructed, host will be assigned to each VM randomly. Assigned host is collected as a position of each VM in position list. Velocity list is generated using position as previous host and random host as next host. After that, id is assigned to a particle and particle’s fitness is calculated. This fitness is used for selecting best position of own particle and searching for non-dominated solutions. 
   (2) Velocity: gives direction from current state to better state, velocity is composed of 2 components: previous host and next host. Velocity is used as main operation to drive particles toward the best destination (best solution). 
   (3) Swarm: is composed of list of particles and its archive. Archive is a storage storing nondominated solutions of the swarm. The main functions in Swarm class are handling archive when choosing solution for velocity update equation, adding solution, removing solution when archive is full. 
